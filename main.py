@@ -12,6 +12,7 @@ JOKE = (
 
 assert 1 <= len(JOKE) <= 199, f"joke is {len(JOKE)} chars, must be 1-199"
 assert JOKE.strip(), "joke must not be only whitespace"
+assert "\n" not in JOKE, "joke must be a single line"
 
 os.makedirs(OUT, exist_ok=True)
 with open(os.path.join(OUT, "entry.txt"), "w", encoding="utf-8") as f:
